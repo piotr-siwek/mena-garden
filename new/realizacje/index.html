@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio realizacji Mena Garden - Zobacz nasze najpiękniejsze projekty ogrodów i przestrzeni zewnętrznych.">
+    <meta name="keywords" content="portfolio ogrodów, realizacje projektów, ogrody zdjęcia, Mena Garden projekty">
+    <title>Realizacje | Mena Garden - Portfolio Projektów Ogrodowych</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../../assets/icon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-green': {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #22c55e, #16a34a, #15803d);
+            background-size: 200% 200%;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+        }
+    </style>
+</head>
+<body class="font-jakarta bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-1">
+                        <img src="../../assets/mena-garden-logo.svg" alt="Mena Garden Logo" class="w-full h-full">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">Mena Garden</h1>
+                        <p class="text-xs text-brand-green-600 font-medium">Realizacje</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="../" class="text-gray-700 hover:text-brand-green-600 font-medium transition-colors duration-200">Strona główna</a>
+                    <a href="../#services" class="text-gray-700 hover:text-brand-green-600 font-medium transition-colors duration-200">Usługi</a>
+                    <a href="../#about" class="text-gray-700 hover:text-brand-green-600 font-medium transition-colors duration-200">O nas</a>
+                    <a href="../#contact" class="text-gray-700 hover:text-brand-green-600 font-medium transition-colors duration-200">Kontakt</a>
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-brand-green-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <div class="inline-flex items-center space-x-2 text-brand-green-600 font-semibold mb-6">
+                    <div class="w-8 h-px bg-brand-green-400"></div>
+                    <span class="text-sm uppercase tracking-wider">Portfolio</span>
+                    <div class="w-8 h-px bg-brand-green-400"></div>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+                    Nasze 
+                    <span class="bg-gradient-to-r from-brand-green-600 to-brand-green-800 bg-clip-text text-transparent">
+                        Realizacje
+                    </span>
+                </h1>
+                
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+                    Każdy projekt to unikalna historia przekształcenia przestrzeni w piękny, 
+                    funkcjonalny ogród. Zobacz, jak tworzymy ogrody marzeń naszych klientów.
+                </p>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 mb-16">
+                    <button class="filter-btn active bg-brand-green-500 text-white px-6 py-3 rounded-full font-semibold" data-filter="all">
+                        Wszystkie
+                    </button>
+                    <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-brand-green-400" data-filter="modern">
+                        Nowoczesne
+                    </button>
+                    <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-brand-green-400" data-filter="classic">
+                        Klasyczne
+                    </button>
+                    <button class="filter-btn bg-white text-gray-700 px-6 py-3 rounded-full font-semibold border-2 border-gray-200 hover:border-brand-green-400" data-filter="irrigation">
+                        Systemy nawadniania
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                
+                <!-- Project 1: Nowoczesny Ogród -->
+                <div class="portfolio-item card-hover bg-white rounded-2xl shadow-lg overflow-hidden" data-category="modern" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Nowoczesny ogród - minimalistyczny design" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <div class="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                                <h3 class="font-bold text-gray-900">Nowoczesny Ogród</h3>
+                                <p class="text-gray-600 text-sm">Warszawa | 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ogród Minimalistyczny</h3>
+                        <p class="text-gray-600 mb-4">Elegancki design z czystymi liniami, nowoczesną roślinnością i funkcjonalnymi strefami wypoczynku.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-brand-green-100 text-brand-green-700 px-3 py-1 rounded-full text-xs font-medium">Projektowanie</span>
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Realizacja</span>
+                            </div>
+                            <a href="/realizacje/nowoczesny-ogrod/" class="text-brand-green-600 hover:text-brand-green-700 font-semibold">
+                                Zobacz więcej →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Ogród Klasyczny -->
+                <div class="portfolio-item card-hover bg-white rounded-2xl shadow-lg overflow-hidden" data-category="classic" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Klasyczny ogród z pergolą" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <div class="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                                <h3 class="font-bold text-gray-900">Ogród Klasyczny</h3>
+                                <p class="text-gray-600 text-sm">Kraków | 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Ogród z Pergolą</h3>
+                        <p class="text-gray-600 mb-4">Tradycyjny ogród z bogatą roślinnością, pergolą i klimatycznymi ścieżkami.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-brand-green-100 text-brand-green-700 px-3 py-1 rounded-full text-xs font-medium">Mała architektura</span>
+                                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium">Nasadzenia</span>
+                            </div>
+                            <a href="/realizacje/ogrod-klasyczny/" class="text-brand-green-600 hover:text-brand-green-700 font-semibold">
+                                Zobacz więcej →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: System Nawadniania -->
+                <div class="portfolio-item card-hover bg-white rounded-2xl shadow-lg overflow-hidden" data-category="irrigation" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Automatyczny system nawadniania" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <div class="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                                <h3 class="font-bold text-gray-900">System Nawadniania</h3>
+                                <p class="text-gray-600 text-sm">Gdańsk | 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Automatyczne Nawadnianie</h3>
+                        <p class="text-gray-600 mb-4">Nowoczesny system kropelkowy z programowalnym sterowaniem i czujnikami.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Technologia</span>
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">Ekologia</span>
+                            </div>
+                            <a href="/realizacje/system-nawadniania/" class="text-brand-green-600 hover:text-brand-green-700 font-semibold">
+                                Zobacz więcej →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-6">
+                Masz pomysł na swój ogród?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Skontaktuj się z nami, aby omówić Twój projekt. Każdy ogród to nowa przygoda!
+            </p>
+            <a href="../#contact" class="btn-primary text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl">
+                Umów bezpłatną konsultację
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-1">
+                        <img src="../../assets/mena-garden-logo.svg" alt="Mena Garden Logo" class="w-full h-full">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Mena Garden</h3>
+                        <p class="text-sm text-brand-green-400 font-medium">Profesjonalne usługi ogrodnicze</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">© 2024 Mena Garden. Wszystkie prawa zastrzeżone.</p>
+                <a href="../" class="text-brand-green-400 hover:text-brand-green-300 transition-colors duration-200">
+                    ← Powrót do strony głównej
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-in-out'
+        });
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-brand-green-500', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700');
+                });
+
+                // Add active class to clicked button
+                button.classList.add('active', 'bg-brand-green-500', 'text-white');
+                button.classList.remove('bg-white', 'text-gray-700');
+
+                // Filter items
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeIn 0.5s ease-in-out';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Add fade in animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html> 

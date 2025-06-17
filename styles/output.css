@@ -9,6 +9,7 @@
     --color-green-400: oklch(0.792 0.209 151.711);
     --color-green-500: oklch(0.723 0.219 149.579);
     --color-green-600: oklch(0.627 0.194 149.214);
+    --color-green-700: oklch(0.527 0.154 150.069);
     --color-gray-50: oklch(0.985 0.002 247.839);
     --color-gray-100: oklch(0.967 0.003 264.542);
     --color-white: #fff;
@@ -32,6 +33,7 @@
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --blur-lg: 16px;
     --aspect-video: 16 / 9;
     --default-transition-duration: 150ms;
@@ -311,6 +313,18 @@
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
+  .animate-\[fadeIn_500ms_ease-in-out_200ms\] {
+    animation: fadeIn 500ms ease-in-out 200ms;
+  }
+  .animate-\[fadeIn_500ms_ease-in-out_400ms\] {
+    animation: fadeIn 500ms ease-in-out 400ms;
+  }
+  .animate-\[fadeIn_500ms_ease-in-out_600ms\] {
+    animation: fadeIn 500ms ease-in-out 600ms;
+  }
+  .animate-pulse {
+    animation: var(--animate-pulse);
+  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -585,6 +599,12 @@
   }
   .text-\[\#638863\] {
     color: #638863;
+  }
+  .text-green-500 {
+    color: var(--color-green-500);
+  }
+  .text-green-700 {
+    color: var(--color-green-700);
   }
   .text-white {
     color: var(--color-white);
@@ -912,4 +932,9 @@
   syntax: "*";
   inherits: false;
   initial-value: 1;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
 }
