@@ -14,85 +14,38 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-green': {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
     <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- Custom styles -->
     <style>
-        :root {
-            --brand-green-50: #f0fdf4;
-            --brand-green-100: #dcfce7;
-            --brand-green-200: #bbf7d0;
-            --brand-green-300: #86efac;
-            --brand-green-400: #4ade80;
-            --brand-green-500: #22c55e;
-            --brand-green-600: #16a34a;
-            --brand-green-700: #15803d;
-            --brand-green-800: #166534;
-            --brand-green-900: #14532d;
-        }
-        
-        .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .font-poppins { font-family: 'Poppins', sans-serif; }
-        
-        .brand-green-50 { background-color: var(--brand-green-50); }
-        .brand-green-100 { background-color: var(--brand-green-100); }
-        .brand-green-200 { background-color: var(--brand-green-200); }
-        .brand-green-300 { background-color: var(--brand-green-300); }
-        .brand-green-400 { background-color: var(--brand-green-400); }
-        .brand-green-500 { background-color: var(--brand-green-500); }
-        .brand-green-600 { background-color: var(--brand-green-600); }
-        .brand-green-700 { background-color: var(--brand-green-700); }
-        .brand-green-800 { background-color: var(--brand-green-800); }
-        .brand-green-900 { background-color: var(--brand-green-900); }
-        
-        .text-brand-green-50 { color: var(--brand-green-50); }
-        .text-brand-green-100 { color: var(--brand-green-100); }
-        .text-brand-green-200 { color: var(--brand-green-200); }
-        .text-brand-green-300 { color: var(--brand-green-300); }
-        .text-brand-green-400 { color: var(--brand-green-400); }
-        .text-brand-green-500 { color: var(--brand-green-500); }
-        .text-brand-green-600 { color: var(--brand-green-600); }
-        .text-brand-green-700 { color: var(--brand-green-700); }
-        .text-brand-green-800 { color: var(--brand-green-800); }
-        .text-brand-green-900 { color: var(--brand-green-900); }
-        
-        .border-brand-green-200 { border-color: var(--brand-green-200); }
-        .border-brand-green-400 { border-color: var(--brand-green-400); }
-        .border-brand-green-600 { border-color: var(--brand-green-600); }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, var(--brand-green-500) 0%, var(--brand-green-600) 100%);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background: linear-gradient(135deg, var(--brand-green-600) 0%, var(--brand-green-700) 100%);
-            transform: translateY(-2px);
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, var(--brand-green-50) 0%, white 50%, var(--brand-green-50) 100%);
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes bounce-subtle {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .animate-bounce-subtle {
-            animation: bounce-subtle 4s ease-in-out infinite;
-        }
-        
         .card-hover {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -100,6 +53,18 @@
         .card-hover:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #22c55e, #16a34a, #15803d);
+            background-size: 200% 200%;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
         }
     </style>
 </head>
@@ -154,7 +119,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-gradient-to-br from-purple-50 to-white">
+    <section class="pt-32 pb-20 bg-gradient-to-br from-brand-green-50 to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Breadcrumbs -->
@@ -172,15 +137,15 @@
                 
                 <!-- Content -->
                 <div data-aos="fade-right">
-                    <div class="inline-flex items-center space-x-2 text-purple-600 font-semibold mb-6">
-                        <div class="w-8 h-px bg-purple-400"></div>
+                    <div class="inline-flex items-center space-x-2 text-brand-green-600 font-semibold mb-6">
+                        <div class="w-8 h-px bg-brand-green-400"></div>
                         <span class="text-sm uppercase tracking-wider">Realizacja #03</span>
-                        <div class="w-8 h-px bg-purple-400"></div>
+                        <div class="w-8 h-px bg-brand-green-400"></div>
                     </div>
                     
                     <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
                         Ogród z 
-                        <span class="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+                        <span class="bg-gradient-to-r from-brand-green-600 to-brand-green-800 bg-clip-text text-transparent">
                             Patio
                         </span>
                     </h1>
@@ -193,20 +158,20 @@
                     <!-- Project Details -->
                     <div class="grid grid-cols-2 gap-6 mb-8">
                         <div class="text-center p-4 bg-white rounded-xl shadow-sm">
-                            <div class="text-2xl font-bold text-purple-600 mb-1">2025</div>
+                            <div class="text-2xl font-bold text-brand-green-600 mb-1">2025</div>
                             <div class="text-gray-600 text-sm">Czas realizacji</div>
                         </div>
                         <div class="text-center p-4 bg-white rounded-xl shadow-sm">
-                            <div class="text-2xl font-bold text-purple-600 mb-1">Janów Lubelski</div>
+                            <div class="text-2xl font-bold text-brand-green-600 mb-1">Janów Lubelski</div>
                             <div class="text-gray-600 text-sm">Lokalizacja</div>
                         </div>
                     </div>
                     
                     <!-- Services -->
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">Patio & Trawnik</span>
-                        <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Rabata z kostki</span>
-                        <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">Relaks</span>
+                        <span class="bg-brand-green-100 text-brand-green-700 px-4 py-2 rounded-full text-sm font-medium">Patio & Trawnik</span>
+                        <span class="bg-brand-green-100 text-brand-green-700 px-4 py-2 rounded-full text-sm font-medium">Rabata z kostki</span>
+                        <span class="bg-brand-green-100 text-brand-green-700 px-4 py-2 rounded-full text-sm font-medium">Relaks</span>
                     </div>
                     
                     <div class="flex flex-col sm:flex-row gap-4">
@@ -225,7 +190,7 @@
                         <img src="img/po/493319538_122135562338793499_7846932788216209305_n.jpg"
                              alt="Ogród z patio - główne zdjęcie realizacji" 
                              class="rounded-2xl shadow-2xl w-full h-auto">
-                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-purple-500 rounded-2xl flex items-center justify-center shadow-xl">
+                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-brand-green-500 rounded-2xl flex items-center justify-center shadow-xl">
                             <div class="text-center">
                                 <div class="text-white text-lg font-bold">03</div>
                                 <div class="text-white text-xs">Projekt</div>
@@ -245,7 +210,7 @@
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-6">
                     Efekt 
-                    <span class="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+                    <span class="bg-gradient-to-r from-brand-green-600 to-brand-green-800 bg-clip-text text-transparent">
                         Realizacji
                     </span>
                 </h2>
@@ -289,7 +254,7 @@
                 <div data-aos="fade-right">
                     <h2 class="text-3xl font-black text-gray-900 mb-6">
                         Szczegóły 
-                        <span class="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+                        <span class="bg-gradient-to-r from-brand-green-600 to-brand-green-800 bg-clip-text text-transparent">
                             Projektu
                         </span>
                     </h2>
@@ -311,8 +276,8 @@
                     <!-- Features -->
                     <div class="space-y-4">
                         <div class="flex items-start space-x-3">
-                            <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <div class="w-8 h-8 bg-brand-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-brand-green-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
                                 </svg>
                             </div>
@@ -323,8 +288,8 @@
                         </div>
                         
                         <div class="flex items-start space-x-3">
-                            <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <div class="w-8 h-8 bg-brand-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-brand-green-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
                                 </svg>
                             </div>
@@ -335,8 +300,8 @@
                         </div>
                         
                         <div class="flex items-start space-x-3">
-                            <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <div class="w-8 h-8 bg-brand-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-brand-green-600" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
                                 </svg>
                             </div>
