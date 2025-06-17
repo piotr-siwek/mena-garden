@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dekoracje z Petunii - Realizacja Mena Garden</title>
+    <meta name="description" content="Piękne dekoracje kwiatowe z fioletowymi petuniami wybranymi przez naszą klientkę. Zobacz efekt kolorowej aranżacji ogrodu.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <style>
+        :root {
+            --brand-green-50: #f0fdf4;
+            --brand-green-100: #dcfce7;
+            --brand-green-200: #bbf7d0;
+            --brand-green-300: #86efac;
+            --brand-green-400: #4ade80;
+            --brand-green-500: #22c55e;
+            --brand-green-600: #16a34a;
+            --brand-green-700: #15803d;
+            --brand-green-800: #166534;
+            --brand-green-900: #14532d;
+        }
+        
+        .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        
+        .brand-green-50 { background-color: var(--brand-green-50); }
+        .brand-green-100 { background-color: var(--brand-green-100); }
+        .brand-green-200 { background-color: var(--brand-green-200); }
+        .brand-green-300 { background-color: var(--brand-green-300); }
+        .brand-green-400 { background-color: var(--brand-green-400); }
+        .brand-green-500 { background-color: var(--brand-green-500); }
+        .brand-green-600 { background-color: var(--brand-green-600); }
+        .brand-green-700 { background-color: var(--brand-green-700); }
+        .brand-green-800 { background-color: var(--brand-green-800); }
+        .brand-green-900 { background-color: var(--brand-green-900); }
+        
+        .text-brand-green-50 { color: var(--brand-green-50); }
+        .text-brand-green-100 { color: var(--brand-green-100); }
+        .text-brand-green-200 { color: var(--brand-green-200); }
+        .text-brand-green-300 { color: var(--brand-green-300); }
+        .text-brand-green-400 { color: var(--brand-green-400); }
+        .text-brand-green-500 { color: var(--brand-green-500); }
+        .text-brand-green-600 { color: var(--brand-green-600); }
+        .text-brand-green-700 { color: var(--brand-green-700); }
+        .text-brand-green-800 { color: var(--brand-green-800); }
+        .text-brand-green-900 { color: var(--brand-green-900); }
+        
+        .border-brand-green-200 { border-color: var(--brand-green-200); }
+        .border-brand-green-400 { border-color: var(--brand-green-400); }
+        .border-brand-green-600 { border-color: var(--brand-green-600); }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--brand-green-500) 0%, var(--brand-green-600) 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--brand-green-600) 0%, var(--brand-green-700) 100%);
+            transform: translateY(-2px);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--brand-green-50) 0%, white 50%, var(--brand-green-50) 100%);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-bounce-subtle {
+            animation: bounce-subtle 4s ease-in-out infinite;
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="font-jakarta bg-gray-50 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 group">
+                    <a href="../../" class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-1 transform group-hover:rotate-6 transition-transform duration-300">
+                            <img src="../../../assets/mena-garden-logo.svg" alt="Mena Garden Logo" class="w-full h-full">
+                        </div>
+                        <div>
+                            <h1 class="text-xl font-bold text-gray-900">Mena Garden</h1>
+                            <p class="text-xs text-brand-green-600 font-medium">Profesjonalne usługi ogrodnicze</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="../../#home" class="text-gray-700 hover:text-brand-green-600 font-medium transition-colors duration-200">Strona główna</a>
+                    <a href="../../#services" class="text-gray-700 hover:text-brand-green-600 font-medium transition-colors duration-200">Usługi</a>
+                    <a href="../" class="text-brand-green-600 font-medium border-b-2 border-brand-green-600">Realizacje</a>
+                    <a href="../../#about" class="text-gray-700 hover:text-brand-green-600 font-medium transition-colors duration-200">O nas</a>
+                    <a href="../../#contact" class="text-gray-700 hover:text-brand-green-600 font-medium transition-colors duration-200">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-pink-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Breadcrumbs -->
+            <nav class="flex mb-8" data-aos="fade-up">
+                <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                    <li><a href="../../" class="hover:text-brand-green-600 transition-colors duration-200">Strona główna</a></li>
+                    <li><svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li><a href="../" class="hover:text-brand-green-600 transition-colors duration-200">Realizacje</a></li>
+                    <li><svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></li>
+                    <li class="text-brand-green-600 font-medium">Dekoracje z Petunii</li>
+                </ol>
+            </nav>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Content -->
+                <div data-aos="fade-right">
+                    <div class="inline-flex items-center space-x-2 text-pink-600 font-semibold mb-6">
+                        <div class="w-8 h-px bg-pink-400"></div>
+                        <span class="text-sm uppercase tracking-wider">Realizacja #04</span>
+                        <div class="w-8 h-px bg-pink-400"></div>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                        Dekoracje z 
+                        <span class="bg-gradient-to-r from-pink-600 to-purple-800 bg-clip-text text-transparent">
+                            Petunii
+                        </span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Petunia pełna piękną dekoracją ogrodu. Nasza wspaniała klientka wybrała kolor fioletu, 
+                        tworząc przepiękną kompozycję kwiatową.
+                    </p>
+                    
+                    <!-- Project Details -->
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                            <div class="text-2xl font-bold text-pink-600 mb-1">2024</div>
+                            <div class="text-gray-600 text-sm">Rok realizacji</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                            <div class="text-2xl font-bold text-pink-600 mb-1">Fioletowy</div>
+                            <div class="text-gray-600 text-sm">Kolor dominujący</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">Kwiaty</span>
+                        <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full text-sm font-medium">Nasadzenia sezonowe</span>
+                        <span class="bg-violet-100 text-violet-700 px-4 py-2 rounded-full text-sm font-medium">Petunia</span>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="../../#contact" class="btn-primary text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl">
+                            Zamów podobny projekt
+                        </a>
+                        <a href="../" class="bg-white text-brand-green-600 px-8 py-4 rounded-full font-bold border-2 border-brand-green-200 hover:border-brand-green-400 transition-colors duration-200">
+                            ← Wszystkie realizacje
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Featured Image -->
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative">
+                        <img src="../../materialy_realizacje/4/obrazki/po/502398585_122139139706793499_4450221653607481519_n.jpg" 
+                             alt="Dekoracje z petunii - główne zdjęcie realizacji" 
+                             class="rounded-2xl shadow-2xl w-full h-auto">
+                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-pink-500 rounded-2xl flex items-center justify-center shadow-xl">
+                            <div class="text-center">
+                                <div class="text-white text-lg font-bold">04</div>
+                                <div class="text-white text-xs">Projekt</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Gallery -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-6">
+                    Kolorowy 
+                    <span class="bg-gradient-to-r from-pink-600 to-purple-800 bg-clip-text text-transparent">
+                        Efekt
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Fioletowe petunie tworzą piękną dekorację kwiatową w ogrodzie
+                </p>
+            </div>
+
+            <!-- Results Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 image-gallery">
+                <div class="card-hover rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="../../materialy_realizacje/4/obrazki/po/502398585_122139139706793499_4450221653607481519_n.jpg" 
+                         alt="Fioletowe petunie - efekt końcowy 1" 
+                         class="w-full h-80 object-cover">
+                </div>
+                <div class="card-hover rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="../../materialy_realizacje/4/obrazki/po/502487540_122139139664793499_8136557665823336007_n.jpg" 
+                         alt="Fioletowe petunie - efekt końcowy 2" 
+                         class="w-full h-80 object-cover">
+                </div>
+                <div class="card-hover rounded-2xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <img src="../../materialy_realizacje/4/obrazki/po/502521024_122139139742793499_6456502188196178747_n.jpg" 
+                         alt="Fioletowe petunie - efekt końcowy 3" 
+                         class="w-full h-80 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Description -->
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-black text-gray-900 mb-6">
+                        Szczegóły 
+                        <span class="bg-gradient-to-r from-pink-600 to-purple-800 bg-clip-text text-transparent">
+                            Projektu
+                        </span>
+                    </h2>
+                    
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Ten projekt pokazuje, jak ważna jest współpraca z klientem przy wyborze kolorystyki 
+                            ogrodu. Nasza klientka od razu wiedziała, że chce fioletowe petunie, co pozwoliło 
+                            nam stworzyć spójną i harmonijną kompozycję.
+                        </p>
+                        
+                        <p class="text-gray-600 leading-relaxed mb-8">
+                            Petunie to doskonały wybór na ozdobę ogrodu - kwitną długo, są odporne na warunki 
+                            atmosferyczne i tworzą gęste, kolorowe dywany kwiatów przez cały sezon.
+                        </p>
+                    </div>
+                    
+                    <!-- Features -->
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Długie kwitnienie</h3>
+                                <p class="text-gray-600 text-sm">Petunie kwitną przez cały sezon od wiosny do jesieni</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Wybór klienta</h3>
+                                <p class="text-gray-600 text-sm">Kolor fioletowy był osobistym wyborem klientki</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Łatwa pielęgnacja</h3>
+                                <p class="text-gray-600 text-sm">Petunie to rośliny nieskomplikowane w uprawie</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stats -->
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-8">Informacje o projekcie</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                                <span class="text-gray-600">Typ usługi</span>
+                                <span class="font-semibold text-gray-900">Nasadzenia kwiatowe</span>
+                            </div>
+                            
+                            <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                                <span class="text-gray-600">Czas realizacji</span>
+                                <span class="font-semibold text-gray-900">2024</span>
+                            </div>
+                            
+                            <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                                <span class="text-gray-600">Rodzaj kwiatów</span>
+                                <span class="font-semibold text-gray-900">Petunia</span>
+                            </div>
+                            
+                            <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                                <span class="text-gray-600">Status</span>
+                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">Ukończony</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-100">
+                            <h4 class="font-semibold text-gray-900 mb-4">Zalety petunii</h4>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <p>• Długie i obfite kwitnienie</p>
+                                <p>• Szeroka gama kolorów</p>
+                                <p>• Odporność na warunki pogodowe</p>
+                                <p>• Łatwa pielęgnacja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation to other projects -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-black text-gray-900 mb-4">
+                    Zobacz Inne 
+                    <span class="bg-gradient-to-r from-brand-green-600 to-brand-green-800 bg-clip-text text-transparent">
+                        Realizacje
+                    </span>
+                </h2>
+                <p class="text-gray-600">Każdy projekt to unikalna historia transformacji</p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../kompleksowa-transformacja-ogrodu/" class="bg-brand-green-500 text-white px-8 py-4 rounded-full font-bold hover:bg-brand-green-600 transition-colors duration-200">
+                    → Następny projekt
+                </a>
+                <a href="../" class="bg-white text-brand-green-600 px-8 py-4 rounded-full font-bold border-2 border-brand-green-200 hover:border-brand-green-400 transition-colors duration-200">
+                    Wszystkie realizacje
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-6">
+                Marzysz o kolorowym ogrodzie?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Skontaktuj się z nami, aby omówić nasadzenia kwiatowe w Twoim ogrodzie
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../../#contact" class="btn-primary text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl">
+                    Umów bezpłatną konsultację
+                </a>
+                <a href="tel:+48535500195" class="bg-white text-gray-900 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors duration-200">
+                    Zadzwoń: +48 535 500 195
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-1">
+                        <img src="../../../assets/mena-garden-logo.svg" alt="Mena Garden Logo" class="w-full h-full">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Mena Garden</h3>
+                        <p class="text-sm text-brand-green-400 font-medium">Profesjonalne usługi ogrodnicze</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-4">© 2024 Mena Garden. Wszystkie prawa zastrzeżone.</p>
+                <a href="../" class="text-brand-green-400 hover:text-brand-green-300 transition-colors duration-200">
+                    ← Powrót do realizacji
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-in-out'
+        });
+    </script>
+
+</body>
+</html> 
