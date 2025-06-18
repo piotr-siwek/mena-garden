@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Usługi ogrodnicze Mena Garden - koszenie trawników, przycinanie drzew, nasadzenia, systemy nawadniania, pielęgnacja ogrodów przez cały rok.">
-    <meta name="keywords" content="usługi ogrodnicze, koszenie trawników, przycinanie drzew, systemy nawadniania, pielęgnacja ogrodów">
+    <meta name="description" content="Kompleksowe usługi ogrodnicze Mena Garden: koszenie trawników, przycinanie drzew i krzewów, systemy nawadniania, nasadzenia roślin, pielęgnacja przez cały rok. Profesjonalna obsługa ogrodów w Polsce. Tel: 535 500 195">
+
     <meta name="author" content="Mena Garden">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Polish">
     
-    <title>Usługi | Mena Garden - Profesjonalne Usługi Ogrodnicze</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://menagarden.pl/uslugi/">
+    <meta property="og:title" content="Usługi Ogrodnicze | Mena Garden - Koszenie, Przycinanie, Nawadnianie">
+    <meta property="og:description" content="Kompleksowe usługi ogrodnicze: koszenie trawników, przycinanie drzew, systemy nawadniania, nasadzenia. Profesjonalna pielęgnacja ogrodów przez cały rok.">
+    <meta property="og:image" content="https://menagarden.pl/img/koszenie-trawy.jpg">
+    <meta property="og:site_name" content="Mena Garden">
+    <meta property="og:locale" content="pl_PL">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Usługi Ogrodnicze | Mena Garden">
+    <meta property="twitter:description" content="Kompleksowe usługi ogrodnicze: koszenie trawników, przycinanie drzew, systemy nawadniania, nasadzenia.">
+    <meta property="twitter:image" content="https://menagarden.pl/img/koszenie-trawy.jpg">
+    
+    <title>Usługi Ogrodnicze | Mena Garden - Koszenie Trawników, Przycinanie Drzew, Systemy Nawadniania</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://menagarden.pl/uslugi/">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicona.jpg">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -172,6 +193,90 @@
             background: linear-gradient(135deg, #16a34a, #15803d);
         }
     </style>
+
+    <!-- Structured Data - JSON-LD for Services -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Usługi Ogrodnicze Mena Garden",
+        "description": "Kompleksowe usługi ogrodnicze: koszenie trawników, przycinanie drzew i krzewów, systemy nawadniania, nasadzenia roślin, pielęgnacja przez cały rok",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Mena Garden",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Brzozówka Kolonia 32",
+                "addressCountry": "PL",
+                "addressRegion": "Lubelskie"
+            },
+            "telephone": "+48535500195",
+            "email": "menagarden@vp.pl"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Katalog Usług Ogrodniczych",
+            "itemListElement": [
+                {
+                    "@type": "Service",
+                    "name": "Koszenie Trawników",
+                    "description": "Regularne koszenie i pielęgnacja trawników zapewniająca piękny, zdrowy wygląd przez cały sezon wegetacyjny",
+                    "category": "Ogrodnictwo"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Przycinanie Drzew i Krzewów",
+                    "description": "Profesjonalne cięcie i formowanie drzew oraz krzewów dla zachowania ich zdrowia i estetycznego wyglądu",
+                    "category": "Ogrodnictwo"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Systemy Nawadniania",
+                    "description": "Projektowanie i montaż nowoczesnych systemów nawadniania zapewniających optymalną pielęgnację roślin",
+                    "category": "Ogrodnictwo"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Nasadzenia i Aranżacje",
+                    "description": "Tworzenie pięknych kompozycji roślinnych i aranżowanie przestrzeni ogrodowych",
+                    "category": "Ogrodnictwo"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Pielęgnacja przez Cały Rok",
+                    "description": "Kompleksowa opieka nad ogrodem w każdym sezonie - od wiosny do zimy",
+                    "category": "Ogrodnictwo"
+                }
+            ]
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Województwo Lubelskie"
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Strona główna",
+                "item": "https://menagarden.pl/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Usługi",
+                "item": "https://menagarden.pl/uslugi/"
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="font-jakarta bg-gray-50 overflow-x-hidden">
 
@@ -187,7 +292,7 @@
                             <img src="../img/mena-garden-logo.png" alt="Mena Garden Logo" class="w-full h-full">
                         </div>
                         <div>
-                            <h1 class="text-xl font-bold text-gray-900">Mena Garden</h1>
+                            <div class="text-xl font-bold text-gray-900">Mena Garden</div>
                             <p class="text-xs text-brand-green-600 font-medium">Profesjonalne usługi ogrodnicze</p>
                         </div>
                     </a>
@@ -203,8 +308,12 @@
                 </div>
 
                 <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:text-brand-green-600 hover:bg-gray-100 transition-colors duration-200">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-btn" 
+                        aria-label="Otwórz menu nawigacyjne"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu"
+                        class="lg:hidden p-2 rounded-lg text-gray-600 hover:text-brand-green-600 hover:bg-gray-100 transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -294,9 +403,10 @@
                 <div class="service-card bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group" 
                      data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="../img/koszenie-trawy.jpg"
-                         alt="Koszenie trawników" 
-                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                                                 <img src="../img/koszenie-trawy.jpg"
+                          alt="Profesjonalne koszenie trawników - usługi ogrodnicze Mena Garden" 
+                          class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                          loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         <div class="absolute top-4 left-4">
                             <div class="w-12 h-12 bg-brand-green-500 rounded-xl flex items-center justify-center text-white shadow-lg">
@@ -347,9 +457,10 @@
                 <div class="service-card bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group" 
                      data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="../img/przycinanie-drzew-i-krzewow.jpg"
-                         alt="Przycinanie drzew i krzewów" 
-                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                                                 <img src="../img/przycinanie-drzew-i-krzewow.jpg"
+                          alt="Profesjonalne przycinanie drzew i krzewów - cięcie pielęgnacyjne" 
+                          class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                          loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         <div class="absolute top-4 left-4">
                             <div class="w-12 h-12 bg-brand-green-500 rounded-xl flex items-center justify-center text-white shadow-lg">
@@ -400,9 +511,10 @@
                 <div class="service-card bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group" 
                      data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="../img/nasadzenia-i-aranzacje.jpg"
-                         alt="Nasadzenia i aranżacje ogrodowe" 
-                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                                                 <img src="../img/nasadzenia-i-aranzacje.jpg"
+                          alt="Nasadzenia i aranżacje ogrodowe - projektowanie zieleni" 
+                          class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                          loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         <div class="absolute top-4 left-4">
                             <div class="w-12 h-12 bg-brand-green-500 rounded-xl flex items-center justify-center text-white shadow-lg">
@@ -457,9 +569,10 @@
                 <div class="service-card bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group" 
                      data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="../img/systemy-nawadniania.jpg"
-                         alt="Systemy nawadniania" 
-                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                                                 <img src="../img/systemy-nawadniania.jpg"
+                          alt="Systemy nawadniania ogrodów - automatyczne podlewanie roślin" 
+                          class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                          loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         <div class="absolute top-4 left-4">
                             <div class="w-12 h-12 bg-brand-green-500 rounded-xl flex items-center justify-center text-white shadow-lg">
@@ -510,9 +623,10 @@
                 <div class="service-card bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group" 
                      data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="../img/pielegnacja-caly-rok.jpg"
-                         alt="Pielęgnacja roślin przez cały rok" 
-                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                                                 <img src="../img/pielegnacja-caly-rok.jpg"
+                          alt="Pielęgnacja ogrodów przez cały rok - całoroczna opieka nad roślinami" 
+                          class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                          loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         <div class="absolute top-4 left-4">
                             <div class="w-12 h-12 bg-brand-green-500 rounded-xl flex items-center justify-center text-white shadow-lg">

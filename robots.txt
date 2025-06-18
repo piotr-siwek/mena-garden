@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Główne strony
+Allow: /
+Allow: /uslugi/
+Allow: /realizacje/
+
+# Zasoby
+Allow: /img/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.webp
+Allow: /*.svg
+
+# Sitemap
+Sitemap: https://menagarden.pl/sitemap.xml
+
+# Czas między requestami (w sekundach)
+Crawl-delay: 1 

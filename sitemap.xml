@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Strona główna -->
+  <url>
+    <loc>https://menagarden.pl/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://menagarden.pl/img/hero.webp</image:loc>
+      <image:title>Profesjonalne usługi ogrodnicze Mena Garden</image:title>
+      <image:caption>Pięknie utrzymany ogród - efekt pracy Mena Garden</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Strona usług -->
+  <url>
+    <loc>https://menagarden.pl/uslugi/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://menagarden.pl/img/koszenie-trawy.jpg</image:loc>
+      <image:title>Koszenie trawników - usługi ogrodnicze</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://menagarden.pl/img/przycinanie-drzew-i-krzewow.jpg</image:loc>
+      <image:title>Przycinanie drzew i krzewów</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://menagarden.pl/img/systemy-nawadniania.jpg</image:loc>
+      <image:title>Systemy nawadniania ogrodów</image:title>
+    </image:image>
+  </url>
+
+  <!-- Strona realizacji -->
+  <url>
+    <loc>https://menagarden.pl/realizacje/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Realizacje 2025 -->
+  <url>
+    <loc>https://menagarden.pl/realizacje/2025/system-nawadniania-janow-lubelski/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://menagarden.pl/realizacje/2025/system-nawadniania-janow-lubelski/img/po/493539134_122133742262793499_1022046686427905820_n.jpg</image:loc>
+      <image:title>System nawadniania Janów Lubelski</image:title>
+      <image:caption>Instalacja deszczowa ze zbiornikiem - Mena Garden</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://menagarden.pl/realizacje/2025/kompleksowa-transformacja-ogrodu/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://menagarden.pl/realizacje/2025/kompleksowa-transformacja-ogrodu/img/po/505169785_122140659440793499_8905368173092943182_n.jpg</image:loc>
+      <image:title>Kompleksowa transformacja ogrodu</image:title>
+      <image:caption>Metamorfoza przestrzeni ogrodowej - Mena Garden</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://menagarden.pl/realizacje/2025/ogrod-bez-trawnika/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://menagarden.pl/realizacje/2025/ogrod-bez-trawnika/img/po/492784625_122133745976793499_6156706625048239474_n.jpg</image:loc>
+      <image:title>Ogród bez trawnika</image:title>
+      <image:caption>Alternatywne rozwiązania ogrodowe - Mena Garden</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://menagarden.pl/realizacje/2025/ogrod-z-patio-janow-lubelski/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://menagarden.pl/realizacje/2025/ogrod-z-patio-janow-lubelski/img/po/493319538_122135562338793499_7846932788216209305_n.jpg</image:loc>
+      <image:title>Ogród z patio Janów Lubelski</image:title>
+      <image:caption>Relaksacyjna przestrzeń ogrodowa - Mena Garden</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://menagarden.pl/realizacje/2025/dekoracje-z-petunii/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://menagarden.pl/realizacje/2025/dekoracje-z-petunii/img/po/502398585_122139139706793499_4450221653607481519_n.jpg</image:loc>
+      <image:title>Dekoracje z petunii</image:title>
+      <image:caption>Kolorowe aranżacje kwiatowe - Mena Garden</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://menagarden.pl/realizacje/2025/pielegnacja-ogrodu/</loc>
+    <lastmod>2025-01-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://menagarden.pl/realizacje/2025/pielegnacja-ogrodu/img/po/508010521_122141765660793499_2682019565182098284_n.jpg</image:loc>
+      <image:title>Pielęgnacja ogrodu</image:title>
+      <image:caption>Profesjonalna opieka nad zielenią - Mena Garden</image:caption>
+    </image:image>
+  </url>
+
+</urlset> 
